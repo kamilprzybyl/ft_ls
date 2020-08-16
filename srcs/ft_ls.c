@@ -114,23 +114,6 @@ int main(int argc, char **argv)
         printf("\n");
     }
     
-
-    // stat(argv[0], &filestat);
-    // printf("File Size: \t\t%lld bytes\n", filestat.st_size);
-    // printf("Number of Links: \t%d\n", filestat.st_nlink);
-    // printf("File Permissions: \t");
-    // printf( (S_ISDIR(filestat.st_mode)) ? "d" : "-");
-    // printf( (filestat.st_mode & S_IRUSR) ? "r" : "-");
-    // printf( (filestat.st_mode & S_IWUSR) ? "w" : "-");
-    // printf( (filestat.st_mode & S_IXUSR) ? "x" : "-");
-    // printf( (filestat.st_mode & S_IRGRP) ? "r" : "-");
-    // printf( (filestat.st_mode & S_IWGRP) ? "w" : "-");
-    // printf( (filestat.st_mode & S_IXGRP) ? "x" : "-");
-    // printf( (filestat.st_mode & S_IROTH) ? "r" : "-");
-    // printf( (filestat.st_mode & S_IWOTH) ? "w" : "-");
-    // printf( (filestat.st_mode & S_IXOTH) ? "x" : "-");
-    // printf("\n");
-
     closedir(folder);
 
     return (0);
