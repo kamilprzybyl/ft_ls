@@ -18,20 +18,18 @@ int main(int argc, char **argv)
 
     check_flag(argv, &info);
 
-    info.path_len = strlen(argv[info.i]);
-    info.folder = opendir(argv[info.i]);
-    argc++;                                 /* only for silence warning about unused variable */
-    
+    argc++;                                     /* only for silence warning about unused variable */
+
     if (info.is_aflag && info.is_lflag)
         la_flag(argv, &info);
     else if (info.is_lflag)
         l_flag(argv, &info);
     else if (info.is_aflag)
-        a_flag(&info);
+        a_flag(argv, &info);
+    else if (info.is_Rflag)
+        R_flag(argv[info.i]);
     else
-        no_flag(&info);
-    
-    closedir(info.folder);
+        no_flag(argv, &info);
 
     return (0);
 }
