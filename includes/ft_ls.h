@@ -30,8 +30,10 @@ typedef struct      s_info
 
 
 void check_flag(char **argv, t_info *info);
-void la_flag(char **argv, t_info *info);
-void l_flag(char **argv, t_info *info);
-void a_flag(char **argv, t_info *info);
+void la_flag(char *path, t_info *info);
+void l_flag(char *path, t_info *info);
+void a_flag(char *path, t_info *info);
 void R_flag(char *path);
-void no_flag(char **argv, t_info *info);
+void Ra_flag(char *path);
+void Rl_flag(char *path);
+void no_flag(char *path, t_info *info);

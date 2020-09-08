@@ -21,15 +21,19 @@ int main(int argc, char **argv)
     argc++;                                     /* only for silence warning about unused variable */
 
     if (info.is_aflag && info.is_lflag)
-        la_flag(argv, &info);
+        la_flag(argv[info.i], &info);
+    else if (info.is_aflag && info.is_Rflag)
+        Ra_flag(argv[info.i]);
+    else if (info.is_lflag && info.is_Rflag)
+        Rl_flag(argv[info.i]);
     else if (info.is_lflag)
-        l_flag(argv, &info);
+        l_flag(argv[info.i], &info);
     else if (info.is_aflag)
-        a_flag(argv, &info);
+        a_flag(argv[info.i], &info);
     else if (info.is_Rflag)
         R_flag(argv[info.i]);
     else
-        no_flag(argv, &info);
+        no_flag(argv[info.i], &info);
 
     return (0);
 }

@@ -17,7 +17,7 @@ void check_flag(char **argv, t_info *info)
             info->is_Rflag = 1;
         else
             break;
-            
+
         info->i++;
     }    
 }
