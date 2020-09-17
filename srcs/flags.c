@@ -18,7 +18,7 @@ void handle_recursion(char *path, t_info *info)
     folder = opendir(path);
 
     while ((info->entry = readdir(folder)))
-    {
+    { 
         path = strcat(path, "/");
         path = strcat(path, info->entry->d_name);
         stat(path, &info->filestat);

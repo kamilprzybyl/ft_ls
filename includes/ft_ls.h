@@ -33,3 +33,6 @@ void print_long(char *path, t_info *info);
 void handle_input(char *path, t_info *info);
 void print_files(char *path, t_info *info);
 void handle_recursion(char *path, t_info *info);
+void quickSort(char *arr[], int low, int high);
+void printArray(char *arr[], int size);
+void swap(char **a, char **b);  
