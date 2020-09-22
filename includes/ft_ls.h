@@ -29,10 +29,11 @@ typedef struct      s_info
 
 
 void check_flag(char **argv, t_info *info);
-void print_long(char *path, t_info *info);
+void print_long(char *path, t_info *info, char **arr);
 void handle_input(char *path, t_info *info);
 void print_files(char *path, t_info *info);
 void handle_recursion(char *path, t_info *info);
-void quickSort(char *arr[], int low, int high);
-void printArray(char *arr[], int size);
+void quick_sort(char **arr, int low, int high);
+void print_normal(char **arr);
 void swap(char **a, char **b);  
+void rverese_array(char *arr[], int start, int end);

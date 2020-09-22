@@ -9,7 +9,7 @@ void swap(char **a, char **b)
 } 
 
 
-void quickSort(char *arr[], int low, int high)
+void quick_sort(char *arr[], int low, int high)
 {
     int     pivot;
     int     start;
@@ -28,7 +28,7 @@ void quickSort(char *arr[], int low, int high)
         {
             if (arr[high][0] > arr[pivot][0])
                 high--;
-            else if (arr[high][0] == arr[pivot][0])
+            else if (arr[high][0] == arr[pivot][0]) // if first chars of strings are equal check the remaining part (char by char)
             {
                 int     i;
 
@@ -81,18 +81,8 @@ void quickSort(char *arr[], int low, int high)
         }
     }
     
-    quickSort(arr, start, (pivot - 1));
-    quickSort(arr, (pivot + 1), end);
+    quick_sort(arr, start, (pivot - 1));
+    quick_sort(arr, (pivot + 1), end);
 
     return;
 }
-
-
-void printArray(char *arr[], int size) 
-{ 
-    int i; 
-    printf("Sorted array: \n"); 
-    for (i=0; i < size; i++) 
-        printf("%s", arr[i]); 
-    printf("\n"); 
-} 
