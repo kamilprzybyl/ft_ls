@@ -1,0 +1,3 @@
+[submodule "ft_ls"]
+	path = ft_ls
+	url = git@github.com:kamilprzybyl/ft_ls.git
