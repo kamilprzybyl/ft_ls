@@ -16,9 +16,11 @@ void print_files(char *path, t_info *info)
 {
     char    **arr;
     int     arr_len;
+    int     i;
 
     arr = create_arr(path, info);
     arr_len = 0;
+    i = 0;
 
     while (arr[arr_len])
         arr_len++;
@@ -34,6 +36,12 @@ void print_files(char *path, t_info *info)
         print_long(path, info, arr);
     else
         print_normal(arr);
+
+    while (arr[i])
+    {
+        free(arr[i]);
+        i++;
+    }
 }
 
 char **create_arr(char *path, t_info *info)
@@ -88,11 +96,12 @@ void handle_tflag(char **arr, char *path, t_info *info, int arr_len)
     quick_sort_struct(tfile, 0, arr_len-1);
 
     i = 0;
-    /* now from already sorted struct array we have to copy file names to an arr because we don't want to keep it in a structure */
+    /* now from already sorted struct array we have to copy file names to an arr because we don't want to keep it in a structure (because our print functions do not read from structure but from array of strings)*/
     while (arr[i])
     {
         ft_bzero(arr[i], ft_strlen(arr[i]));
         ft_strcpy(arr[i], tfile[i].name);
+        free(tfile[i].name);
         i++;
     }
 }
@@ -133,6 +142,7 @@ void print_long(char *path, t_info *info, char **arr)
         new_str = ft_strncpy(new_str, &(modify_date[4]), 12);
         new_str[12] = '\0';
         printf(" %s", new_str);         // bus error when ft_printf  
+        free(new_str);
         printf(" %s", arr[i]);          // bus error when ft_printf
         printf("\n");                   // doesn't make new line when ft_printf    
 

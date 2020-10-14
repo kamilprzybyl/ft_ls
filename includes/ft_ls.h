@@ -1,11 +1,11 @@
 #include <stdio.h>
-#include <dirent.h>     /* opendir, readdir, closedir functions */
-#include <string.h>
-#include <sys/stat.h>   /* stat function */
-#include <time.h>       /* ctime function */
-#include <pwd.h>        /* getpwuid funtion */
-#include <grp.h>        /* getgrgid function */
-#include <stdlib.h>     /* malloc function */
+#include <dirent.h>                         /* opendir, readdir, closedir functions */
+#include <string.h>     
+#include <sys/stat.h>                       /* stat function */
+#include <time.h>                           /* ctime function */
+#include <pwd.h>                            /* getpwuid funtion */
+#include <grp.h>                            /* getgrgid function */
+#include <stdlib.h>                         /* malloc function */
 #include "../libft/includes/libft.h"
 
 typedef struct      s_info

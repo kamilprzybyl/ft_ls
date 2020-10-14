@@ -1,7 +1,7 @@
 #include "ft_ls.h"
 
 
-void ls_check_flag(char **argv, t_info *info)
+void check_flag(char **argv, t_info *info)
 {
     int     x;
 
