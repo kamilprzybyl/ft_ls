@@ -1,10 +1,10 @@
 # ft_ls
-This project will make me recode the command "ls"
+This project made me recode the command "ls"
 
 <br />
 
-## General
-1. Recreating the system's "ls" command
+## About
+1. It contains recoded system's command "ls"
 
 2. Amongst the numerous options available I have created the following
 - `-l`
@@ -12,6 +12,8 @@ This project will make me recode the command "ls"
 - `-a`
 - `-r`
 - `-t`
+
+3. The overall display, depending on each option, stayed as identical as posible to the system command
 
 <br />
 
