@@ -141,10 +141,10 @@ void print_long(char *path, t_info *info, char **arr)
         new_str = malloc(13 * sizeof(char));
         new_str = ft_strncpy(new_str, &(modify_date[4]), 12);
         new_str[12] = '\0';
-        printf(" %s", new_str);         // bus error when ft_printf  
+        ft_printf(" %s", new_str);         
         free(new_str);
-        printf(" %s", arr[i]);          // bus error when ft_printf
-        printf("\n");                   // doesn't make new line when ft_printf    
+        ft_printf(" %s", arr[i]);          
+        ft_printf("\n");                     
 
         ft_bzero(&(path[path_len]), ft_strlen(path));
         i++;
@@ -158,7 +158,7 @@ void print_normal(char **arr)
     i = 0;
     while (arr[i])
     {
-        printf("%s\n", arr[i]); // bus error when ft_printf 
+        ft_printf("%s\n", arr[i]);  
         i++;
     }
 }
@@ -180,7 +180,7 @@ void handle_recursion(char *path, t_info *info)
         {
             if ((info->entry->d_name[0] != '.' || info->is_aflag) && (ft_strcmp(".", info->entry->d_name) && ft_strcmp("..", info->entry->d_name)))
             {
-                printf("%s:\n", path); // bus error when ft_printf 
+                ft_printf("%s:\n", path);
                 handle_input(path, info);
             }
         }

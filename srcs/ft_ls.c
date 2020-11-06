@@ -16,8 +16,8 @@ int main(int __attribute__ ((unused)) argc, char **argv)
     t_info          info;
 
     initialize_var(&info);
-
-    check_flag(argv, &info);
+    
+    ls_check_flag(argv, &info);
 
     handle_input(argv[info.i], &info);
 

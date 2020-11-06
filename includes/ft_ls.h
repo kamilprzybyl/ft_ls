@@ -6,7 +6,7 @@
 #include <pwd.h>                            /* getpwuid funtion */
 #include <grp.h>                            /* getgrgid function */
 #include <stdlib.h>                         /* malloc function */
-#include "../libft/includes/libft.h"
+#include "../Libft/includes/libft.h"
 
 typedef struct      s_info
 {
