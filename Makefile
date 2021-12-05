@@ -7,8 +7,8 @@ SRC		=	src/main.c \
 			src/ft_ls.c \
 			src/print.c \
 			src/sort_files.c \
-			src/quick_sort.c \
-			src/reverse_array.c
+			src/utils/quick_sort.c \
+			src/utils/reverse_array.c
 OBJ 	=	$(SRC:.c=.o)
 
 all: $(NAME)

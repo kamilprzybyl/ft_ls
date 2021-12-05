@@ -36,14 +36,10 @@ typedef struct s_file
 void	parse(char **argv, t_data *data);
 void	run(t_data *data);
 void	print_files(char *path, t_data *data);
-void	print_normal(char **arr);
-void	print_long(char *path, t_data *data, char **arr);
-void	run_recursively(t_data *data);
+void	sort_files(char **arr, char *path, t_data *data, int n);
+
 void	quick_sort_str(char **arr, int low, int high);
 void	quick_sort_struct(t_file *struct_arr, int low, int high);
-void	swap_str(char **a, char **b);
-void	swap_struct(t_file *a, t_file *b);
 void	rverese_array(char *arr[], int start, int end);
-void	handle_tflag(char **arr, char *path, t_data *data, int n);
 
 #endif
