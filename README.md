@@ -1,5 +1,5 @@
 # ft_ls
-This project is made mainly for fun and just for basic knowledge. Also I warn you, the code I have written here is quite disappointing as I wasn't experienced in programming at all back then
+This project is made mainly for fun and just for basic knowledge. Also I warn you, the code I have written here is quite disappointing as I wasn't experienced in programming at all back then<br />
 It doesn't follow norm and probably has a lot of leaks and bugs, please understand 
 
 <br />
