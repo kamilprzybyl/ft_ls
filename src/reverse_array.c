@@ -1,4 +1,4 @@
-#include "ft_ls.h"
+#include "../inc/ft_ls.h"
 
 
 void rverese_array(char *arr[], int start, int end)

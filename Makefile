@@ -1,25 +1,32 @@
-CC = gcc
-CFLAGS = -Wall -Wextra -Werror
-NAME = ft_ls
-HEADERS = includes/
-SRCS = srcs
+CC 		=	gcc
+FLAGS 	=	-Wall -Wextra -Werror
+LIBFT 	=	Libft/libft.a
+NAME 	=	ft_ls
+SRC		=	src/main.c \
+			src/parse.c \
+			src/ft_ls.c \
+			src/print.c \
+			src/sort_files.c \
+			src/quick_sort.c \
+			src/reverse_array.c
+OBJ 	=	$(SRC:.c=.o)
 
-$(NAME): all
- 
-all: 
-	@make -C libft 									# go to libft directory and do make 
-	@$(CC) $(CFLAGS) -I $(HEADERS) libft/libft.a $(SRCS)/*.c -o $(NAME)
-	@echo "\033[32m$(NAME) built!\033[0m"
+all: $(NAME)
 
-	
+%.o: %.c
+	@$(CC) -c $(FLAGS) $^ -o $@
+
+$(NAME): $(LIBFT) $(OBJ)
+	@$(CC) ./Libft/libft.a  $^ -o $@
+
+$(LIBFT):
+	@make --directory=./Libft
+
 clean:
-	@make -C libft clean							# do clean in libft
-	@rm *.o
+	@rm -fr $(OBJ)
 
 fclean:
-	@make -C libft fclean							# do fclean in libft
-	@rm $(NAME) *.o
+	@make clean
+	@rm -fr $(NAME)
 
 re: fclean all
-
-.PHONY: all clean fclean re
