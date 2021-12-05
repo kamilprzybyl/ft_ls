@@ -1,5 +1,6 @@
 # ft_ls
-This project made me recode the command "ls". This project is made mainly for fun and just for basic knowledge. It doesn't follow norm and probably has a lot of leaks :D
+This project is made mainly for fun and just for basic knowledge.
+It doesn't follow norm and probably has a lot of leaks and bugs, please understand 
 
 <br />
 
