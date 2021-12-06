@@ -1,5 +1,6 @@
 # ft_ls
-This project is made mainly for fun and just for basic knowledge. Also I warn you, the code I have written here is quite disappointing as I wasn't experienced in programming at all back then<br />
+This project is made mainly for fun and just for basic knowledge<br />
+sooo yeah... also I warn you, the code I have written here is quite disappointing as I wasn't experienced in programming at all back then<br />
 It doesn't follow norm and probably has a lot of leaks and bugs, please understand 
 
 <br />
@@ -20,7 +21,7 @@ It doesn't follow norm and probably has a lot of leaks and bugs, please understa
 
 ## Setup
 ```
-$ git clone git@github.com:kamilprzybyl/ft_ls.git
+$ git clone https://github.com/kamilprzybyl/ft_ls.git
 $ cd ft_ls
 $ make
 $ ./ft_ls [option] [argument]
