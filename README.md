@@ -6,7 +6,7 @@ It doesn't follow norm and probably has a lot of leaks and bugs, please understa
 <br />
 
 ## About
-1. It contains recoded system's command "ls"
+1. It contains recoded system command "ls"
 
 2. Amongst the numerous options available I have created the following
 - `-l`
@@ -15,14 +15,15 @@ It doesn't follow norm and probably has a lot of leaks and bugs, please understa
 - `-r`
 - `-t`
 
-3. The overall display, depending on each option, stayed as identical as posible to the system command
+3. The overall display, depending on each option, stayed as identical as possible to the system command
 
 <br />
 
 ## Setup
 ```
-$ git clone https://github.com/kamilprzybyl/ft_ls.git
-$ cd ft_ls
+$ git clone <repo>
+$ cd <repo>
 $ make
 $ ./ft_ls [option] [argument]
 ```
+###### path argument is optional
