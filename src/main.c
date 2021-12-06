@@ -16,6 +16,7 @@ int main(__attribute__ ((unused)) int argc, char **argv)
 
 	init(&data);
 	parse(argv, &data);
-	run(&data);
+	if (run(&data) == 1);
+		return (1);
 	return (0);
 }

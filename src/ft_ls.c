@@ -2,12 +2,10 @@
 
 static void	run_recursively(t_data *data)
 {
-	DIR	*folder;
 	int	path_len;
 
 	path_len = ft_strlen(data->path);
-	folder = opendir(data->path);
-	while ((data->entry = readdir(folder)))
+	while ((data->entry = readdir(data->folder)))
 	{ 
 		data->path = strcat(data->path, "/");
 		data->path = strcat(data->path, data->entry->d_name);
@@ -22,15 +20,31 @@ static void	run_recursively(t_data *data)
 		}
 		ft_bzero(&(data->path[path_len]), ft_strlen(data->path));
 	}
-	closedir(folder);
+	closedir(data->folder);
 }
 
-void	run(t_data *data)
+static int open_dir(t_data *data)
 {
+	data->folder = opendir(data->path);
+	if (!data->folder)
+	{
+		ft_putstr_fd("ls: ", 2);
+		ft_putstr_fd(data->path, 2);
+		ft_putstr_fd(": No such file or directory\n", 2);
+		return (1);
+	}
+	return (0);
+}
+
+int	run(t_data *data)
+{
+	if (open_dir(data) == 1)
+		return (1);
 	print_files(data->path, data);
 	if (data->is_Rflag)
 	{
 		printf("\n");
 		run_recursively(data);
 	}
+	return (0);
 }

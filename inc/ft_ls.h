@@ -14,13 +14,13 @@
 typedef struct s_data
 {
 	DIR				*folder;
+	char			*path;
 	int				is_aflag;
 	int				is_lflag;
 	int				is_tflag;
 	int				is_rflag;
 	int				is_Rflag;
 	int				path_len;
-	char			*path;
 	struct group	*grp;
 	struct passwd	*pwd;
 	struct dirent	*entry;
@@ -34,7 +34,7 @@ typedef struct s_file
 }	t_file;
 
 void	parse(char **argv, t_data *data);
-void	run(t_data *data);
+int		run(t_data *data);
 void	print_files(char *path, t_data *data);
 void	sort_files(char **arr, char *path, t_data *data, int n);
 
