@@ -26,4 +26,4 @@ $ cd <repo>
 $ make
 $ ./ft_ls [option] [argument]
 ```
-###### path argument is optional
+(path argument is optional)
