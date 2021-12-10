@@ -6,16 +6,15 @@ It doesn't follow norm and probably has a lot of leaks and bugs, please understa
 <br />
 
 ## About
-1. It contains recoded system command "ls"
-
-2. Amongst the numerous options available I have created the following
+It contains recoded system command "ls"<br />
+Amongst the numerous options available I have created the following
 - `-l`
 - `-R`
 - `-a`
 - `-r`
 - `-t`
 
-3. The overall display, depending on each option, stayed as identical as possible to the system command
+The overall display, depending on each option, stayed as identical as possible to the system command
 
 <br />
 
